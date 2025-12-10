@@ -11,6 +11,8 @@ public class Ball {
     private int x;
     private int y;
     private int size;
+    private int xSpeed;
+    private int ySpeed;
 
 	//don't forget you need instance variables:
 	//constructor(s):
@@ -18,11 +20,13 @@ public class Ball {
 		this.x = x;
         this.y = y;
         this.size = size;
+        this.xSpeed = 1;
+        this.ySpeed = 1;
     }
 	//methods:
     public void draw(Graphics g){
         g.setColor(Color.CYAN);
-        g.fillOval(x, y size, size);)
+        g.fillOval(x, y size, size);
     }
     public
 	
