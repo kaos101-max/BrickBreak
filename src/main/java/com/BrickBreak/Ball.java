@@ -40,8 +40,8 @@ public class Ball {
 	// public void reverseY(){
 
     // }
-    public int setXVelocity(){
-        return xSpeed;
+    public void setXVelocity(int newVelocity){
+        xVelocity = newVelocity;
     }
     public int setYVelocity(){
         return ySpeed;
