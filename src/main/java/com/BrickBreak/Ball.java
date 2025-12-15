@@ -28,6 +28,19 @@ public class Ball {
         g.setColor(Color.CYAN);
         g.fillOval(x, y size, size);
     }
-    public
-	
+    public void getXpos(){
+
+    }
+    public void getYpos(){
+
+    }
+    public void reverseX(){
+
+    }
+	public void reverseY(){
+
+    }
+    public void getSize(){
+        
+    }
 }
