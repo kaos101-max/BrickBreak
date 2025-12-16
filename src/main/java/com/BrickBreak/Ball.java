@@ -3,30 +3,41 @@
 // Description: This creates the ball of "Brick Breaker" and its functions
 
 package com.BrickBreak;
-import java.awt.*;
 import java.awt.Color;
+import java.awt.Graphics;
 
 public class Ball {
-	//your code here!
+//your code here!
     private int x;
     private int y;
+    private double changeX;
+    private double changeY;
     private int size;
-    private int xSpeed;
-    private int ySpeed;
-
-	//don't forget you need instance variables:
-	//constructor(s):
-	public Ball (int x, int y, int size){	
-		this.x = x;
+    private Color color;
+//don't forget you need instance variables:
+    public Ball (int x, int y, int size){
+        this.x = x;
         this.y = y;
         this.size = size;
-        this.xSpeed = 1;
-        this.ySpeed = 1;
     }
-	//methods:
+
+
+//constructor(s):
+
+//methods:
+    public void move(){
+        x += changeX;
+        y += changeY;
+    }
+    public void setX(int x){
+        this.x = x;
+    }
+    public void setY(int y){
+        this.y = y;
+    }
     public void draw(Graphics g){
-        g.setColor(Color.CYAN);
-        g.fillOval(x, y size, size);
+        g.setColor(Color.cyan);
+        g.fillOval(x, y, size, size);
     }
     public int getXpos(){
         return x;
@@ -34,19 +45,25 @@ public class Ball {
     public int getYpos(){
         return y;
     }
-    // public void reverseX(){
-
-    // }
-	// public void reverseY(){
-
-    // }
-    public void setXVelocity(int newVelocity){
-        xVelocity = newVelocity;
-    }
-    public void setYVelocity(int newVelocity){
-        yVelocity = newVelocity;
-    }
     public int getSize(){
         return size;
+    }
+    public double getChangeX(){
+        return changeX;
+    }
+    public double getChangeY(){
+        return changeY;
+    }
+    public void setXVelocity(int changeX) {
+        this.changeX = changeX;
+    }
+    public void setYVelocity(int changeY) {
+        this.changeY = changeY;
+    }
+    public void reverseX() {
+        changeX *= 1;
+    }
+    public void reverseY() {
+        changeY *= 1;
     }
 }
