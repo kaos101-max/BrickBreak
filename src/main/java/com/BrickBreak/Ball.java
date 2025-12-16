@@ -43,11 +43,10 @@ public class Ball {
     public void setXVelocity(int newVelocity){
         xVelocity = newVelocity;
     }
-    public int setYVelocity(){
-        return ySpeed;
+    public void setYVelocity(int newVelocity){
+        yVelocity = newVelocity;
     }
     public int getSize(){
         return size;
-        
     }
 }
