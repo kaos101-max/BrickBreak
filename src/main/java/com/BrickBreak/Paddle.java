@@ -1,3 +1,6 @@
+//Daisuke Watanabe
+// Description: This creates the paddle of 'Brick Breaker' and its functions
+//
 package com.BrickBreak;
 
 import java.awt.Color;
@@ -9,7 +12,7 @@ public class Paddle{
     //your code here!
     private int x;
     private int y;
-    private int height = 15;
+    private int height;
     private int width;
     private int speed;
     private Color color;
@@ -23,10 +26,14 @@ public class Paddle{
         this.x = x;
         this.y = y;
         this.width = width;
+        this.height = 15;
         this.speed = speed;
         this.color = color;
     }
     //methods:
+
+    //precon: The paddle will gets its own color or not
+    //postcon: The paddle is colored to 'white'
     public void draw(Graphics g) {
         g.setColor(Color.WHITE);
         g.fillRect(x, y, width, height);
@@ -49,9 +56,13 @@ public class Paddle{
     public int getVelocity(){
         return speed;
     }
+    //precon: The paddle moves in the x position
+    //postcon: It moves horizonatally.
     public void move() {
-        addVelocity(6);
+        x += speed;
     }
+    //precon: The speed has to set to move
+    //postcon: It moves at the speed to paddle the ball.
     public void addVelocity(int num) {
         speed += num;
     }
